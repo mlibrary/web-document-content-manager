@@ -65,9 +65,17 @@ export default createSchema({
         {
           title: "Slug",
           name: "slug",
-          type: 'slug',
-          description: "Used for a unique Web Document URL."
-        }
+          type: "slug",
+          description: "Used for a unique Web Document URL.",
+          options: {
+            source: 'title',
+            maxLength: 200, // will be ignored if slugify is set
+            slugify: input => input
+                                 .toLowerCase()
+                                 .replace(/\s+/g, '-')
+                                 .slice(0, 200)
+          }
+        },
         {
           title: "Description",
           name: "description",
