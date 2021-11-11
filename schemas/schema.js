@@ -86,7 +86,31 @@ export default createSchema({
           title: 'Body content', 
           name: 'body',
           type: 'array', 
-          of: [{type: 'block'}]
+          of: [
+            { type: 'block' },
+            {
+              name: 'callout',
+              type: 'object',
+              title: 'Callout',
+              fields: [
+                {
+                  name: 'variant',
+                  type: 'string', // controlled list
+                  title: 'Variant',
+                },
+                {
+                  title: 'Callout content',
+                  name: 'callout_content',
+                  type: 'array',
+                  of: [
+                    {
+                      type: 'block'
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           title: "Parent Web Document",
