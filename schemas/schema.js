@@ -95,17 +95,15 @@ export default createSchema({
               fields: [
                 {
                   name: 'variant',
-                  type: 'string', // controlled list
-                  title: 'Variant',
+                  type: 'string',
+                  title: 'Variant', // IDEA: perhaps we can do a Reusable Design to schema transformer early on so these are kept in sync with Design System and syncing them doesn't become so laborous? 
                 },
                 {
-                  title: 'Callout content',
-                  name: 'callout_content',
+                  title: 'Content',
+                  name: 'content',
                   type: 'array',
                   of: [
-                    {
-                      type: 'block'
-                    }
+                    { type: 'block' }
                   ]
                 }
               ]

@@ -1,5 +1,5 @@
 {
-  "name": "umich-lib-web-document-content-manager",
+  "name": "umich-lib-web-document-manager",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -15,7 +15,9 @@
   ],
   "dependencies": {
     "@sanity/base": "^2.21.10",
+    "@sanity/block-content-to-hyperscript": "^3.0.0",
     "@sanity/core": "^2.21.11",
+    "@sanity/dashboard": "^2.21.10",
     "@sanity/default-layout": "^2.21.10",
     "@sanity/default-login": "^2.21.10",
     "@sanity/desk-tool": "^2.21.10",
@@ -25,5 +27,7 @@
     "react-dom": "^17.0",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@sanity/production-preview": "^2.15.0"
+  }
 }

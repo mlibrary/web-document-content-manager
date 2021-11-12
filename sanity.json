@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "Web Document Content Manager"
+    "name": "Web Document Manager"
   },
   "api": {
     "projectId": "ods34681",
@@ -11,7 +11,9 @@
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/production-preview",
+    "@sanity/dashboard"
   ],
   "env": {
     "development": {
@@ -20,10 +22,22 @@
       ]
     }
   },
+  "server": {
+    "hostname": "0.0.0.0",
+    "port": 1979
+  },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveWebsitePreviewUrl.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "dashboardConfig.js"
     }
   ]
 }
