@@ -10,36 +10,11 @@ export default {
   },
   fields: [
     {
-      title: "Website",
-      name: 'website',
-      type: 'reference',
-      description: 'Use to decide how to render the Website Header, such as using the Website name for the Website Header name property.',
-      validation: Rule => Rule.required(),
-      to: {
-        type: 'website'
-      }
-    },
-    {
       title: "Title",
       name: "title",
       type: "string",
       description: "The title of the Web Document, displayed in the browser tab and as the h1.",
       validation: Rule => Rule.required(),
-    },
-    {
-      title: "Slug",
-      name: "slug",
-      type: "slug",
-      description: "Used for a unique Web Document URL.",
-      validation: Rule => Rule.required(),
-      options: {
-        source: 'title',
-        maxLength: 200, // will be ignored if slugify is set
-        slugify: input => input
-                             .toLowerCase()
-                             .replace(/\s+/g, '-')
-                             .slice(0, 200)
-      }
     },
     {
       title: "Description",
@@ -78,24 +53,29 @@ export default {
       ]
     },
     {
-      title: "Parent Web Document",
-      name: 'parent_webdoc',
-      type: 'reference',
-      description: 'Used for Web Document heirarchy, such as understanding Web Document siblings, or generating a sitemap.',
-      to: {
-        type: 'webdoc'
+      title: "Slug",
+      name: "slug",
+      type: "slug",
+      description: "Used for a unique Web Document URL.",
+      validation: Rule => Rule.required(),
+      options: {
+        source: 'title',
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: input => input
+                             .toLowerCase()
+                             .replace(/\s+/g, '-')
+                             .slice(0, 200)
       }
     },
     {
-      title: "Child Web Documents",
-      name: 'child_webdocs',
+      title: "Website",
+      name: 'website',
       type: 'reference',
-      description: 'This will be used for understanding if this Web Document has some babies.',
-      to: [
-        {
-          type: 'webdoc'
-        }
-      ]
-    }
+      description: 'Use to decide how to render the Website Header, such as using the Website name for the Website Header name property.',
+      validation: Rule => Rule.required(),
+      to: {
+        type: 'website'
+      }
+    },
   ]
 }

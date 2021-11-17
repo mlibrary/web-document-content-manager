@@ -1,6 +1,6 @@
 export default {
   widgets: [
-      {
+    {
       name: 'netlify',
       options: {
         title: 'My Netlify deploys',
