@@ -14,7 +14,9 @@
     "@sanity/desk-tool",
     "@sanity/production-preview",
     "@sanity/dashboard",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "@sanity/code-input",
+    "@sanity/vision"
   ],
   "env": {
     "development": {

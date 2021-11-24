@@ -16,6 +16,12 @@ export default {
       description: "Used to identify this website. This name will be used as part of the Web Document title and for the Website Header name property."
     },
     {
+      title: 'Codename',
+      name: 'codename',
+      type: 'string',
+      description: 'The unique name used for querying web documents that belong to this website only. Netlify website will use this as an env var when building the website.'
+    },
+    {
       title: "Description",
       name: "description",
       type: "string",

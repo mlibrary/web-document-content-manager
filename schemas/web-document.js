@@ -24,33 +24,9 @@ export default {
       validation: Rule => Rule.required(),
     },
     {
-      title: 'Body content', 
+      title: 'Body Content', 
       name: 'body',
-      type: 'array', 
-      validation: Rule => Rule.required(),
-      of: [
-        { type: 'block' },
-        {
-          name: 'callout',
-          type: 'object',
-          title: 'Callout',
-          fields: [
-            {
-              name: 'variant',
-              type: 'string',
-              title: 'Variant', // IDEA: perhaps we can do a Reusable Design to schema transformer early on so these are kept in sync with Design System and syncing them doesn't become so laborous? 
-            },
-            {
-              title: 'Content',
-              name: 'content',
-              type: 'array',
-              of: [
-                { type: 'block' }
-              ]
-            }
-          ]
-        }
-      ]
+      type: 'builder_blocks', 
     },
     {
       title: "Slug",
@@ -76,6 +52,6 @@ export default {
       to: {
         type: 'website'
       }
-    },
+    }
   ]
 }
