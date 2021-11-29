@@ -3,14 +3,14 @@ export default {
     {
       name: 'netlify',
       options: {
-        title: 'My Netlify deploys',
+        title: 'Netlify',
         sites: [
           {
-            title: 'Web Document Builder',
+            title: 'Design System Website',
             apiId: process.env.NETLIFY_WEB_DOCUMENT_BUILDER_API_ID,
             buildHookId: process.env.NETLIFY_WEB_DOCUMENT_BUILDER_HOOK_ID,
-            name: 'umich-lib-web-documents',
-            url: 'https://umich-lib-web-documents.netlify.app',
+            name: 'umich-lib-design-system',
+            url: 'https://umich-lib-design-system.netlify.app',
           }
         ]
       }
