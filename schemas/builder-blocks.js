@@ -71,7 +71,19 @@ export default {
       title: 'Colors',
       name: 'colors',
       type: 'object',
-      readOnly: true,
+      fields: [
+        {
+          title: 'Optional note',
+          name: 'colors_string',
+          type: 'string',
+          description: 'This input is not used for anyhting, although Sanity requires at least one field. Maybe there is another way...'
+        }
+      ]
+    },
+    {
+      title: 'Spacing',
+      name: 'spacing',
+      type: 'object',
       fields: [
         {
           title: 'Optional note',
