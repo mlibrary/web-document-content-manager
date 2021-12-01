@@ -68,19 +68,16 @@ export default {
       ]
     },
     {
-      title: 'Inline Local Navigation',
-      name: 'inline_local_navigation',
+      title: 'Colors',
+      name: 'colors',
       type: 'object',
+      readOnly: true,
       fields: [
         {
-          title: 'Local Navigation',
-          name: 'inline_local_navigation_ref',
-          type: 'reference',
-          to: [
-            {
-              type: 'local_navigation'
-            }
-          ]
+          title: 'Optional note',
+          name: 'colors_string',
+          type: 'string',
+          description: 'This input is not used for anyhting, although Sanity requires at least one field. Maybe there is another way...'
         }
       ]
     }
